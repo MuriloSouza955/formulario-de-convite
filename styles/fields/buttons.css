@@ -1,0 +1,64 @@
+.switch {
+    display: inline-flex;
+    position: relative;
+}
+
+.switch input {
+    appearance: none;
+    width: 4rem;
+    height: 2rem;
+    border-radius: 999px;
+}
+
+.switch .click {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 4rem;
+    height: 2rem;
+    border-radius: 999px;
+    background-color: var(--input-base);
+    border: 1px solid var(--input-stroke);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.switch .click:before {
+    content: '';
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 999px;
+    background-color: var(--input-stroke);
+    transition: 0.4s;
+    bottom: 0.15rem;
+    left: 0.25rem;
+}
+
+.switch label {
+    margin-top: 0.4rem;
+    margin-left: 0.75rem;
+}
+
+.switch input:checked + .click {
+    background-color: var(--brand-light);
+    /*outline: 1px solid var(--input-stroke);*/
+}
+
+.switch input:checked + .click:before {
+    -webkit-transform: translateX(1.9rem);
+    -ms-transform: translateX(1.9rem);
+    transform: translateX(1.9rem);
+    background-color: var(--text-heading);
+}
+
+.switch input:checked + .click + label.theme:before {
+    content: "Claro";
+}
+
+.switch label.theme:before {
+    content: "Escuro";
+}

@@ -1,0 +1,35 @@
+#app {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 1.25rem;
+    gap: 1.25rem;
+    height: 100vh;
+    overflow: hidden;
+}
+
+aside {
+    background-image: url(../assets/Background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0.75rem;
+    padding: 2rem 2rem 34.5rem 2rem;
+    max-width: 25rem;
+    max-height: 45.5rem;
+    margin-left: auto;
+}
+
+aside .aside-container img {
+    height: 3rem;
+    width: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+
+main {
+    overflow: auto;
+    padding: 3.8rem 8.25rem 5rem 8.25rem;
+    border-radius: 0.75rem;
+    background-color: var(--shape-body);
+    max-width: 51.25rem;
+    max-height: 123.8125rem;
+}
